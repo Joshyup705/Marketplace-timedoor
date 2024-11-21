@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Settings</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .settings-container {
+            display: flex;
+            margin: 50px auto;
+            max-width: 900px;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            width: 200px;
+            padding: 20px;
+            border-right: 1px solid #ddd;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 10px 0;
+            color: #000;
+            text-decoration: none;
+        }
+
+        .sidebar a.active {
+            font-weight: bold;
+        }
+
+        .main-content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .btn-update {
+            background-color: #17a2b8;
+            color: #fff;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="settings-container">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h5>Settings</h5>
+                <a href="#" class="active">Profile details</a>
+                <a href="#">Change Password</a>
+                <a href="#">Transaction History</a>
+            </div>
+
+            <!-- Main Content -->
+            <div class="main-content">
+                <h5>Edit Profile</h5>
+                <form>
+                    <div class="form-group">
+                        <label for="profile-photo">Photo</label>
+                        <div class="d-flex align-items-center">
+                            <img src="https://via.placeholder.com/50" alt="Profile" class="rounded-circle mr-3">
+                            <input type="file" id="profile-photo" class="form-control-file">
+                            <small class="text-muted ml-2">JPG, JPEG or PNG, 1 MB max.</small>
+                            <button type="button" class="btn btn-link text-danger ml-2">
+                                <i class="fas fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="full-name">Full name</label>
+                        <input type="text" class="form-control" id="full-name" value="Jack Daniel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" class="form-control" id="username" value="jackdaniel">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" id="email" value="jack@email.com">
+                    </div>
+
+                    <button type="submit" class="btn btn-update btn-block">Update Profile</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
